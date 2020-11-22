@@ -113,7 +113,7 @@
               <stringProp name="RegexExtractor.match_number">1</stringProp>
             </RegexExtractor>
             <hashTree/>
-            <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="Save Category" enabled="true">
+            <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="Save Category" enabled="false">
               <stringProp name="filename"></stringProp>
               <stringProp name="parameters"></stringProp>
               <boolProp name="resetInterpreter">false</boolProp>
@@ -123,6 +123,22 @@ p = new PrintStream(f);
 this.interpreter.setOut(p);
 print(&quot;Reference Number is,&quot; + category);
 f.close();</stringProp>
+            </BeanShellPostProcessor>
+            <hashTree/>
+            <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="Save Category" enabled="true">
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <boolProp name="resetInterpreter">false</boolProp>
+              <stringProp name="script">// get variables from regular expression extract
+ category = vars.get(&quot;category&quot;);
+ // pass true if want to append to existing file  
+ // if want to overwrite, then don&apos;t pass the second argument
+ FileWriter fstream = new FileWriter(&quot;../../$results/Output_category.csv&quot;, true);
+ BufferedWriter out = new BufferedWriter(fstream);
+ out.write(category);
+ out.write(System.getProperty(&quot;line.separator&quot;));
+ out.close();
+ fstream.close();</stringProp>
             </BeanShellPostProcessor>
             <hashTree/>
           </hashTree>
