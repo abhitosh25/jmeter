@@ -109,7 +109,7 @@
               <stringProp name="RegexExtractor.refname">category</stringProp>
               <stringProp name="RegexExtractor.regex">title&gt;(.*?) - My Store&lt;/title&gt;</stringProp>
               <stringProp name="RegexExtractor.template">$1$</stringProp>
-              <stringProp name="RegexExtractor.default">Output_category_not_found</stringProp>
+              <stringProp name="RegexExtractor.default">category_not_found</stringProp>
               <stringProp name="RegexExtractor.match_number">1</stringProp>
             </RegexExtractor>
             <hashTree/>
@@ -133,7 +133,7 @@ f.close();</stringProp>
  category = vars.get(&quot;category&quot;);
  // pass true if want to append to existing file  
  // if want to overwrite, then don&apos;t pass the second argument
- FileWriter fstream = new FileWriter(&quot;../../$results/Output_category.csv&quot;, true);
+ FileWriter fstream = new FileWriter(&quot;../../Output_category.csv&quot;, true);
  BufferedWriter out = new BufferedWriter(fstream);
  out.write(category);
  out.write(System.getProperty(&quot;line.separator&quot;));
