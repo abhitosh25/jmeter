@@ -118,7 +118,7 @@
               <stringProp name="parameters"></stringProp>
               <boolProp name="resetInterpreter">false</boolProp>
               <stringProp name="script">refnum = vars.get(&quot;category&quot;);
-f = new FileOutputStream(&quot;../../$results/InputData/Output_category.csv&quot;, true);
+f = new FileOutputStream(&quot;../../$results/Output_category.csv&quot;, true);
 p = new PrintStream(f);
 this.interpreter.setOut(p);
 print(&quot;Reference Number is,&quot; + refnum);
