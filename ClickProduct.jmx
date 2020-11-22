@@ -37,7 +37,7 @@
                 <elementProp name="id_category" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.name">id_category</stringProp>
-                  <stringProp name="Argument.value">55555</stringProp>
+                  <stringProp name="Argument.value">${id}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
