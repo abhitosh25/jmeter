@@ -121,7 +121,7 @@
 f = new FileOutputStream(&quot;../../$results/Output_category.csv&quot;, true);
 p = new PrintStream(f);
 this.interpreter.setOut(p);
-print(&quot;Reference Number is,&quot; + refnum);
+print(&quot;Reference Number is,&quot; + category);
 f.close();</stringProp>
             </BeanShellPostProcessor>
             <hashTree/>
