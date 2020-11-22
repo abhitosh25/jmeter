@@ -104,6 +104,27 @@
               <intProp name="Assertion.test_type">16</intProp>
             </ResponseAssertion>
             <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="RegEx_category" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">category</stringProp>
+              <stringProp name="RegexExtractor.regex">title&gt;(.*?) - My Store&lt;/title&gt;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default">Output_category_not_found</stringProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="Save Category" enabled="true">
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <boolProp name="resetInterpreter">false</boolProp>
+              <stringProp name="script">refnum = vars.get(&quot;category&quot;);
+f = new FileOutputStream(&quot;../../$results/InputData/Output_category.csv&quot;, true);
+p = new PrintStream(f);
+this.interpreter.setOut(p);
+print(&quot;Reference Number is,&quot; + refnum);
+f.close();</stringProp>
+            </BeanShellPostProcessor>
+            <hashTree/>
           </hashTree>
         </hashTree>
       </hashTree>

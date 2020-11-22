@@ -16,12 +16,14 @@ mkdir ../../$results
 mkdir ../../$results/HTMLReport
 mkdir ../../$results/Errors
 mkdir ../../$results/InputData
+mkdir ../../$results/OutputData
 #Execute Performance Test
 sh jmeter.sh -Jjmeter.save.saveservice.output_format=xml -Jjmeter.save.saveservice.output_format=csv -n -t ../../$ScriptName -l ../../$results/Test.jtl -e -o ../../$results/HTMLReport
 ##Collect Test Artifacts
 mv jmeter.log ../../$results
 mv ../../PerfError_* ../../$results/Errors
 mv ../../Input_*.csv ../../$results/InputData
+mv ../../Output_*.csv ../../$results/OutputData
 cp ../../$results/Test.jtl ../../$results/AggregateReport.csv
 mv ../../$results/HTMLReport/index.html ../../$results/HTMLReport/PerfTestReport.html
 #Mail The Results
