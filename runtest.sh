@@ -11,12 +11,12 @@ results=PerfTest_results_$time
 #curl http://mirror.cc.columbia.edu/pub/software/apache/jmeter/binaries/apache-jmeter-5.3.tgz -o apache-jmeter-5.3.tgz;
 #tar -xvzf apache-jmeter-5.3.tgz;
 #Create Test Directories
+cd apache-jmeter-5.3/bin;
 mkdir ../../$results
 mkdir ../../$results/HTMLReport
 mkdir ../../$results/Errors
 mkdir ../../$results/InputData
 #Execute Performance Test
-cd apache-jmeter-5.3/bin;
 sh jmeter.sh -Jjmeter.save.saveservice.output_format=xml -Jjmeter.save.saveservice.output_format=csv -n -t ../../$ScriptName -l ../../$results/Test.jtl -e -o ../../$results/HTMLReport
 ##Collect Test Artifacts
 mv jmeter.log ../../$results
