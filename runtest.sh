@@ -18,7 +18,7 @@ mkdir ../../$results/Errors
 mkdir ../../$results/InputData
 mkdir ../../$results/OutputData
 #Execute Performance Test
-nohup sh jmeter.sh -Jjmeter.save.saveservice.output_format=xml -Jjmeter.save.saveservice.output_format=csv -n -t ../../$ScriptName -l ../../$results/Test.jtl -e -o ../../$results/HTMLReport
+nohup sh jmeter.sh -Jjmeter.save.saveservice.output_format=xml -Jjmeter.save.saveservice.output_format=csv -n -t ../../$ScriptName -l ../../$results/Test.jtl -e -o ../../$results/HTMLReport nohup.out 2>&1
 ##Collect Test Artifacts
 mv jmeter.log ../../$results
 mv ../../PerfError_* ../../$results/Errors
