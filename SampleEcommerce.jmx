@@ -24,7 +24,7 @@
           </elementProp>
           <elementProp name="multiplyThread" elementType="Argument">
             <stringProp name="Argument.name">multiplyThread</stringProp>
-            <stringProp name="Argument.value">5</stringProp>
+            <stringProp name="Argument.value">35</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
