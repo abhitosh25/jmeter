@@ -1,0 +1,4 @@
+thread=2
+multiplyThread=8
+rampup=1
+loop=1
